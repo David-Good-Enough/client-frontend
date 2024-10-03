@@ -1,0 +1,91 @@
+/* Global styles for the navbar */
+.navbar {
+    background-color: #333;  /* Dark background color */
+    padding: 10px 20px;  /* Padding for better spacing */
+    display: flex;  /* Use flexbox for layout */
+    justify-content: space-between;  /* Space between logo and links */
+    align-items: center;  /* Center items vertically */
+    color: #fff;  /* White text color */
+    position: sticky;  /* Navbar stays fixed at the top */
+    top: 0;  /* Sticks to the top of the page */
+    z-index: 1000;  /* Ensure it stays above other elements */
+}
+
+/* Navbar logo */
+.navbar-logo {
+    font-size: 1.5rem;  /* Make logo text larger */
+    font-weight: bold;  /* Bold for emphasis */
+    color: #fff;  /* White logo */
+    text-decoration: none;  /* Remove underline from logo */
+    cursor: pointer;  /* Change cursor on hover */
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+    position: absolute;  /* Position it absolutely within the navbar */
+    left: 50%;  /* Move it to the middle of the navbar */
+    transform: translateX(-50%);  /* Center the logo exactly */
+}
+
+.navbar-logo:hover {
+    color: #f39c12;  /* Change color on hover to a vibrant orange */
+}
+
+/* Navbar links container */
+.navbar-links {
+    display: flex;  /* Display links side by side */
+    gap: 15px;  /* Spacing between links */
+    align-items: center;  /* Center links vertically */
+    margin-left: auto;  /* Push the links to the far right */
+}
+
+/* Links and buttons inside the navbar */
+.navbar-link, .navbar-button {
+    font-size: 1rem;  /* Standard text size for buttons/links */
+    color: #fff;  /* White text color */
+    background: none;  /* Transparent background */
+    border: none;  /* No borders */
+    cursor: pointer;  /* Pointer cursor for buttons */
+    text-decoration: none;  /* Remove underline from links */
+    padding: 10px 15px;  /* Padding for better click area */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth hover transitions */
+    display: flex;
+    align-items: center;  /* Ensure links are vertically centered */
+    justify-content: center;  /* Center the text inside the buttons */
+    height: 100%;  /* Make sure buttons take the full height of the navbar */
+}
+
+/* Hover effect for navbar links and buttons */
+.navbar-link:hover, .navbar-button:hover {
+    background-color: #f39c12;  /* Orange background on hover */
+    color: #333;  /* Dark text color on hover */
+    border-radius: 5px;  /* Rounded corners for hover effect */
+}
+
+/* Admin text style */
+.navbar-admin {
+    font-weight: bold;  /* Bold text for Admin */
+    color: #f39c12;  /* Vibrant orange color for Admin label */
+    display: flex;
+    align-items: center;  /* Center the Admin label vertically */
+    justify-content: center;  /* Center the text horizontally */
+    height: 100%;  /* Ensure the Admin label takes full height of navbar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* Stack items vertically on smaller screens */
+        align-items: flex-start;  /* Align items to the left */
+    }
+
+    .navbar-links {
+        flex-direction: column;  /* Stack links vertically on smaller screens */
+        gap: 10px;  /* Smaller gap between links */
+        width: 100%;  /* Take up full width of the navbar */
+        padding-top: 10px;  /* Add padding at the top */
+    }
+
+    .navbar-logo {
+        position: static;  /* Remove the absolute positioning on smaller screens */
+        transform: none;  /* Reset the transform */
+        margin-bottom: 10px;  /* Add space below the logo */
+    }
+}
