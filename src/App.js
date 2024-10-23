@@ -14,7 +14,7 @@ function App() {
         <UserProvider>
         <Router>
             <div>
-                <Navbar />  {/* Placer le composant Navbar ici */}
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
